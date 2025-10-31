@@ -1,0 +1,31 @@
+@mixin Display($items,$justify,$gap){
+    display: flex;
+    align-items: $items;
+    justify-content: $justify;
+    gap:$gap;
+}
+@mixin Text($weight, $size,$height, $color,$spacing,$hclr,$bottom){
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+    line-height: $height;
+    letter-spacing: $spacing;
+    margin-bottom: $bottom;
+    &:hover{
+        color: $hclr;
+    }
+}
+@mixin Btn($padding,$bg-color,$clr,$border,$radius){
+    padding: $padding;
+    background-color: $bg-color;
+    color: $clr;
+    border:$border;
+    border-radius:$radius;
+    font-family: 'Proxima Nova',sans-serif;
+    @include Text($color:$clr,$size:15px,$weight:600,$height:146%,$spacing:0px,$bottom:0px,$hclr:transparent);
+    &:hover{
+        color: $bg-color;
+        background-color: transparent;
+        border-color: $bg-color;
+    }
+}

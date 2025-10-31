@@ -1,0 +1,40 @@
+.site-header{
+    padding: 27px 0 27px;
+}
+.header {
+    @include Display($items:center,$justify:space-between,$gap:0px);
+}
+.header__logo-link {
+    display: inline-block;
+}
+
+.navbar {
+    @include Display($items:center,$justify:start,$gap:30px)
+}
+.navbar__link {
+    @include Text($weight:400, $size:16px,$height:146%, $color:white,$spacing:0,$hclr:#E58D35,$bottom:0)
+}
+.header__btn {
+   @include Btn($padding:14px 27px 14px,$bg-color:#E58D35,$clr:white,$border:2px solid transparent,$radius:90px)
+
+}
+.header__menu-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+@media (max-width:954px){
+    .site-header{
+        padding: 25px 0;
+    }
+    .navbar,.header__btn{
+        display: none;
+    }
+    .header__menu-btn{
+        display: block;
+    }
+    .header__logo-link>img{
+        width: 127px;
+        height: 35px;
+    }
+}
